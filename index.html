@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tetris | Capstone Project</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="game-container">
+        <h1>Tetris</h1>
+        <canvas id="gameCanvas" width="300" height="600"></canvas>
+        <div id="gameUI">
+          <div class="info-panel">
+            <div class="info-box">
+              <h3>Skor</h3>
+              <p id="score">0</p>
+            </div>
+            <div class="info-box">
+              <h3>Level</h3>
+              <p id="level">1</p>
+            </div>
+          </div>
+          <div class="controls">
+            <button id="startButton" class="control-button">
+              Mulai Permainan
+            </button>
+            <button id="rotateButton" class="control-button hidden">
+              <i class="fas fa-redo-alt"></i> Putar
+            </button>
+            <button id="pauseButton" class="control-button hidden">
+              <i class="fas fa-pause"></i> Jeda
+            </button>
+          </div>
+        </div>
+        <div id="gameOverUI" class="hidden">
+          <h2>Permainan Selesai</h2>
+          <p>Skor Anda: <span id="finalScore">0</span></p>
+          <button id="playAgainButton" class="control-button">Main Lagi</button>
+        </div>
+      </div>
+      <div class="documentation">
+        <h2>Cara Bermain</h2>
+        <p>
+          Gunakan tombol panah di keyboard untuk mengontrol blok. Anda juga bisa
+          menggunakan tombol <b>R</b> untuk memutar blok, dan tombol
+          <b>P</b>
+          untuk menjeda permainan.
+        </p>
+        <ul>
+          <li><span class="key">Kiri</span> Pindah ke kiri</li>
+          <li><span class="key">Kanan</span> Pindah ke kanan</li>
+          <li><span class="key">Bawah</span> Jatuhkan lebih cepat</li>
+          <li><span class="key">R</span> Putar blok</li>
+          <li><span class="key">P</span> Jeda/Lanjutkan</li>
+        </ul>
+        <p>Atau klik tombol "Putar" untuk memutar bentuk blok.</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
